@@ -1,0 +1,36 @@
+<main>
+    <h1>Atualiza jogo</h1>
+    <section id="section-cadastro">
+        <form *ngIf="produto">
+            
+            
+                <label for="produto">Id
+                <input type="text" class="form-control" name="id" [(ngModel)]="produto.id" readonly></label>
+          
+            <br>
+            
+                <label for="produto">Nome do Produto
+                <input type="texto" class="form control" name="produto" [(ngModel)]="produto.produto"></label>
+            
+            <br>
+            
+                <label for="descricao">Descrição
+                <input type="text" class="form-control" name="descricao"[(ngModel)]="produto.descricao"></label>
+          
+            <br>
+           
+                <label for="foto">Foto
+                <input type="text" class="form-control" name="foto" [(ngModel)]="produto.foto"></label>
+                
+            
+            <br>
+            
+                <label for="preco">Preço
+                <input type="number" class="form-control" name="preco" [(ngModel)]="produto.preco"></label>
+            
+            <br>
+            <button type="submit" class="btn btn-primary mb-3" (click)="atualizar(produto.id)">Atualizar</button>
+        </form>
+    </section>
+
+</main>
